@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kartvizit Plus - İş kartlarınızı ve kişilerinizi profesyonelce yönetin. Kategori yönetimi, global arama, Caller ID ve daha fazlası.">
+    <meta name="keywords" content="kartvizit, kişi yönetimi, rehber, contact management, business card">
+    <title>Kartvizit Plus - İş Kartları ve Kişi Yönetimi</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            animation: fadeInUp 1s ease;
+        }
+
+        .subtitle {
+            font-size: 1.5em;
+            margin-bottom: 30px;
+            opacity: 0.9;
+            animation: fadeInUp 1s ease 0.2s both;
+        }
+
+        .cta-buttons {
+            margin-top: 40px;
+            animation: fadeInUp 1s ease 0.4s both;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 40px;
+            margin: 10px;
+            background: white;
+            color: #667eea;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        /* Features Section */
+        .features {
+            padding: 80px 20px;
+            background: #f8f9fa;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        .feature-icon {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        .feature-card h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+
+        /* Screenshots Section */
+        .screenshots {
+            padding: 80px 20px;
+            background: white;
+        }
+
+        .screenshots-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 50px;
+        }
+
+        .screenshot {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .screenshot:hover {
+            transform: scale(1.05);
+        }
+
+        .screenshot img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Download Section */
+        .download {
+            padding: 80px 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .download h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        /* Footer */
+        footer {
+            background: #2c3e50;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .footer-links {
+            margin: 20px 0;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            transition: opacity 0.3s;
+        }
+
+        .footer-links a:hover {
+            opacity: 0.7;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        section h2 {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+
+        section p {
+            text-align: center;
+            font-size: 1.2em;
+            color: #666;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+
+            .subtitle {
+                font-size: 1.2em;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .screenshots-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <h1>📇 Kartvizit Plus</h1>
+            <p class="subtitle">İş Kartları ve Kişi Yönetimi</p>
+            <p style="font-size: 1.1em; margin-top: 20px; opacity: 0.9;">
+                Kişilerinizi profesyonelce organize edin, kategorilere ayırın ve kolayca yönetin
+            </p>
+            <div class="cta-buttons">
+                <a href="#download" class="btn">Hemen İndir</a>
+                <a href="#features" class="btn btn-secondary">Özellikleri Keşfet</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <h2>Özellikler</h2>
+            <p>Kartvizit Plus ile kişilerinizi daha iyi yönetin</p>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🔍</div>
+                    <h3>Global Arama</h3>
+                    <p>Tüm kategoriler, kişiler ve notlar arasında anında arama yapın. Son aramalarınızı görüntüleyin.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">📁</div>
+                    <h3>Kategori Yönetimi</h3>
+                    <p>Kişilerinizi sınırsız kategori altında organize edin. Toplu silme özelliği ile kolayca yönetin.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <h3>Telefon Rehberi Entegrasyonu</h3>
+                    <p>Cihazınızın telefon rehberinden kişileri kolayca içe aktarın. Mevcut kategorilere ekleyin veya yeni kategori oluşturun.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">📞</div>
+                    <h3>Caller ID</h3>
+                    <p>Kayıtlı kişileriniz aradığında veya siz onları aradığınızda arama ekranında bilgileri otomatik görünsün.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">⭐</div>
+                    <h3>Yıldız Filtreleme</h3>
+                    <p>Kişilerinizi yıldız puanlarına göre sıralayın (artan/azalan). Favori kişilerinizi kolayca bulun.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🌐</div>
+                    <h3>Çoklu Dil Desteği</h3>
+                    <p>Türkçe, İngilizce ve Rusça dil seçenekleri ile kullanın.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🌙</div>
+                    <h3>Gece/Gündüz Modu</h3>
+                    <p>Güneş/Ay ikonu ile tema değiştirin. Tercihiniz otomatik kaydedilir.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h3>Tam Gizlilik</h3>
+                    <p>Tüm verileriniz cihazınızda güvenle saklanır. Bulut senkronizasyonu yok, tam gizlilik.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">📤</div>
+                    <h3>Kolay Paylaşım</h3>
+                    <p>Kişileri veya kategorileri WhatsApp, SMS ile paylaşın veya panoya kopyalayın.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Screenshots Section -->
+    <section class="screenshots">
+        <div class="container">
+            <h2>Ekran Görüntüleri</h2>
+            <p>Uygulamanın arayüzünü keşfedin</p>
+            
+            <div class="screenshots-grid">
+                <!-- Screenshot placeholders - Replace with actual images -->
+                <div class="screenshot">
+                    <img src="https://via.placeholder.com/300x600/667eea/ffffff?text=Ana+Ekran" alt="Ana Ekran">
+                </div>
+                <div class="screenshot">
+                    <img src="https://via.placeholder.com/300x600/764ba2/ffffff?text=Kategori+Detay" alt="Kategori Detay">
+                </div>
+                <div class="screenshot">
+                    <img src="https://via.placeholder.com/300x600/667eea/ffffff?text=Global+Arama" alt="Global Arama">
+                </div>
+                <div class="screenshot">
+                    <img src="https://via.placeholder.com/300x600/764ba2/ffffff?text=Kişi+Ekleme" alt="Kişi Ekleme">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section class="download" id="download">
+        <div class="container">
+            <h2>Hemen İndirin</h2>
+            <p style="font-size: 1.2em; margin-bottom: 30px;">
+                Kartvizit Plus'ı şimdi indirin ve kişilerinizi profesyonelce yönetmeye başlayın
+            </p>
+            <div class="cta-buttons">
+                <a href="https://play.google.com/store/apps/details?id=com.futurist.kartvizitpro" class="btn" target="_blank">
+                    Google Play'den İndir
+                </a>
+                <a href="https://www.amazon.com/gp/product/B0XXXXXXX" class="btn btn-secondary" target="_blank">
+                    Amazon Appstore'dan İndir
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <h3>Kartvizit Plus</h3>
+            <p>İş kartlarınızı ve kişilerinizi profesyonelce yönetin</p>
+            
+            <div class="footer-links">
+                <a href="#features">Özellikler</a>
+                <a href="privacy-policy.html">Gizlilik Politikası</a>
+                <a href="mailto:kartvizitplus@gmail.com">İletişim</a>
+            </div>
+            
+            <p style="margin-top: 30px; opacity: 0.7;">
+                © 2025 Kartvizit Plus. Tüm hakları saklıdır.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+            });
+        });
+    </script>
+</body>
+</html>
